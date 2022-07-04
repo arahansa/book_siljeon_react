@@ -4,6 +4,7 @@ import {Link, Route, Routes} from 'react-router-dom';
 import Home from "./Home";
 import ExamUseRef from "./exam_useRef/ExamUseRef";
 import ExamUseReducer from "./exam_useReducer/ExamUseReducer";
+import ExamImpertiveHandle from "./exam_impertive_handle/ExamImpertiveHandle";
 
 function App() {
   return (
@@ -22,16 +23,17 @@ function App() {
           Learn React
         </a>
       </header>*/}
-        <div>
+        <nav className={'nav'}>
             <Link to={"/"} >Provider 예제</Link>
-            <span>&nbsp;&nbsp;</span>
-            <Link to={"/useRef"} >useRef 예제</Link>
-            <Link to={"/useReducer"} >useReducer 예제</Link>
-        </div>
+            <Link to={"/useRef"} >useRef</Link>
+            <Link to={"/useReducer"} >useReducer</Link>
+            <Link to={"/useImperativeHandle"} >useImperativeHandle</Link>
+        </nav>
       <Routes>
         <Route path={"/"} element={<Home />}/>
         <Route path={"/useRef"} element={<ExamUseRef />}/>
         <Route path={"/useReducer"} element={<ExamUseReducer />}/>
+        <Route path={"/useImperativeHandle"} element={<ExamImpertiveHandle />}/>
       </Routes>
     </div>
   );
