@@ -4,6 +4,9 @@ import ErrorBoundary from "./ErrorBoundary";
 import Counter from "./Counter";
 import MyComponent from "./MyComponent";
 import MyComponent2 from "./MyComponent2";
+import withDebug from "./withDebug";
+import DebugCounter from "./DebugCounter";
+import MouseTracer from "./MouseTracer";
 
 function App() {
   return (
@@ -26,6 +29,14 @@ function App() {
           </ErrorBoundary>
         <MyComponent />
         <MyComponent2 />
+        <p>디버그 카운터</p>
+        <ErrorBoundary>
+          <DebugCounter />
+        </ErrorBoundary>
+
+        <MouseTracer>
+          { ({x, y}) => (<p>{`(x,y) : (${x}, ${y})`}</p>)}
+        </MouseTracer>
       </header>
 
     </div>
