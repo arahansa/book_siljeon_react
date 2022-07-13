@@ -7,6 +7,7 @@ import { callApiLike } from '../../common/api';
 describe('fetchData', () => {
   const timeline = { id: 1 };
   const action = actions.requestLike(timeline);
+  console.log('action : ', action);
   const gen = cloneableGenerator(fetchData)();
 
   it('before callApiLike', () => {
