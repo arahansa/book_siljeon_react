@@ -10,7 +10,7 @@ class ErrorBoundary extends React.Component{
     }
 
     sendErrorToServer(error, info){
-        console.log('I am sendErrorToServer : ', error, info);
+        console.warn('I am sendErrorToServer : ', error, info);
     }
 
     render(){
